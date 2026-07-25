@@ -14,7 +14,7 @@ else
     exit 1
 fi
 
-sudo -v
+sudo -n true
 if [ $? == 1 ]
 then
     echo "Without root permission, you cannot run the test due to our test is using namespace"

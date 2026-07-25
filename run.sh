@@ -11,7 +11,7 @@ BSF_ENABLE=0
 PID_LIST=()
 echo $$ > run.pid
 
-sudo -v # cache credentials
+sudo -n true # cache credentials (patched for non-interactive/headless sudo -v tty quirk)
 if [ $? == 1 ] # check if credentials were successfully cached
 then
     echo "[ERRO] Without root permission, you cannot run free5GC"
